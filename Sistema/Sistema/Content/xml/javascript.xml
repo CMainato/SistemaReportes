@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<javascript>
+  <script>
+    <value>Content/js/jquery.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/bootstrap.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/html5shiv.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/respond.min.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/moment.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/bootstrap-datetimepicker.min.js</value>
+  </script>
+  <script>
+    <value>Content/bootstrap/js/bootstrap-typeahead.js</value>
+  </script>
+</javascript>
