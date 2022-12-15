@@ -67,10 +67,10 @@
         OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting" EmptyDataText="Gestionar">
          <PagerSettings Mode="NumericFirstLast" Visible="False" />
                     <PagerStyle BackColor="LightSteelBlue" HorizontalAlign="Right" />
-                    <HeaderStyle BackColor="#464646" Font-Size="14px" ForeColor="White" Height="30px" />
+                    <HeaderStyle BackColor="#464646" Font-Size="14px" ForeColor="White" Height="30px"  />
                     <AlternatingRowStyle BackColor="#EAEAEA" />
         <Columns>
-              <asp:TemplateField HeaderText="Perfil" ItemStyle-Width="150">
+              <asp:TemplateField HeaderText="Perfil" ItemStyle-Width="150" HeaderStyle-ForeColor="White">
                 <ItemTemplate>
                     <asp:Label ID="lblnombre" runat="server" Text='<%# Eval("descripcion") %>'></asp:Label>
                 </ItemTemplate>
@@ -84,7 +84,7 @@
        
 
             
-            <asp:CommandField ButtonType="Link"  ShowDeleteButton="true" DeleteText="Editar"  HeaderText = "Editar" HeaderStyle-BackColor="green" ItemStyle-Width="150" />
+            <asp:CommandField ButtonType="Link"  ShowDeleteButton="true" DeleteText="Editar"  HeaderText = "Editar" HeaderStyle-BackColor="green" ItemStyle-Width="150" HeaderStyle-ForeColor ="White" />
               
         </Columns>
     </asp:GridView>
