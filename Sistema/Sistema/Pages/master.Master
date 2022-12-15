@@ -48,7 +48,7 @@
 
 
 
-
+<%--
         <div class="navbar-item has-dropdown is-hoverable" id="divadministrador" runat="server">
                             <a class="navbar-link">Administrador
                             </a>
@@ -68,33 +68,48 @@
                                 </a>--%>
                             </div>
                         </div>
-
-                           <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="divreporteador">
-                            <a class="navbar-link">Configuración Reporteador
+                 <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="Usuarios">
+                            <a class="navbar-link">Usuarios
                             </a>
 
                             <div class="navbar-dropdown">
-                                <a class="navbar-item"  href="conexiones.aspx">Configuración Conexiones </a>
-                                  <a class="navbar-item"  href="#">Configuración Campaña </a>
-                                   <a class="navbar-item"  href="#">Configuración Query </a>
-                                    <a class="navbar-item"  href="#">Configuración Parametros </a>
-                                  <a class="navbar-item"  href="#">Configuración Frecuencias </a>
-                                  <a class="navbar-item"  href="#">Configuración Dias Frecuencias </a>
-                                      <a class="navbar-item"  href="#">Configuración Salidas </a>
-                                <a class="navbar-item"  href="#">Configuración Rol </a>
-                                  <a class="navbar-item"  href="#">Configuración Persona </a>
-                                 <a class="navbar-item"  href="#">Configuración Aprobación </a>
+                                 <a class="navbar-item"  href="#">Creación Usuario</a>
                                 
+                                                                        
+                            </div>
+                        </div>
 
-                               
-                               
-                              
+                           <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="configuraacion">
+                            <a class="navbar-link">Configuración
+                            </a>
+
+                            <div class="navbar-dropdown">
+                                 <a class="navbar-item"  href="#">Roles</a>
+                                 <a class="navbar-item"  href="#">Menus</a>
+                                <a class="navbar-item"  href="conexiones.aspx">Conexiones</a>
+                                 <a class="navbar-item"  href="#">Campañas</a>
+                                  <a class="navbar-item"  href="#">Repositorios</a>
+                                  <a class="navbar-item"  href="#">Formatos</a>
+                                    <a class="navbar-item"  href="#">Parametros Query</a>
+                                  <a class="navbar-item"  href="#">Frecuencias</a>
+                                                                        
+                            </div>
+                        </div>
+                   <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="Asignaciones">
+                            <a class="navbar-link">Asignaciones
+                            </a>
+
+                            <div class="navbar-dropdown">
+                                 <a class="navbar-item"  href="#">Parametros Query</a>
+                                 <a class="navbar-item"  href="#">Menu Rol</a>
+                                
+                                                                        
                             </div>
                         </div>
 
 
 
-                          <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="divCampanas">
+                   <%--       <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="divCampanas">
                             <a class="navbar-link">Campañas
                             </a>
 
@@ -106,8 +121,8 @@
                                
                               
                             </div>
-                        </div>
-  <div class="navbar-item has-dropdown is-hoverable" runat="server"  id="divoperaciones">
+                        </div>--%>
+<%--  <div class="navbar-item has-dropdown is-hoverable" runat="server"  id="divoperaciones">
                             <a class="navbar-link">Operaciones
                             </a>
 
@@ -124,8 +139,8 @@
                                
                               
                             </div>
-                        </div>
-  <div class="navbar-item has-dropdown is-hoverable" runat="server"  id="divoAgente">
+                        </div>--%>
+<%--  <div class="navbar-item has-dropdown is-hoverable" runat="server"  id="divoAgente">
                             <a class="navbar-link">Agente
                             </a>
 
@@ -136,7 +151,7 @@
                                
                               
                             </div>
-                        </div>
+                        </div>--%>
 
 
                     </div>
