@@ -12,7 +12,7 @@ namespace Sistema.Pages
 {
     public partial class master : System.Web.UI.MasterPage
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString());
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["desarollo"].ToString());
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,10 +32,10 @@ namespace Sistema.Pages
 
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("opersis_login", con);
+                    SqlCommand cmd = new SqlCommand("reporteador", con);
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add("@operacion", "perfil");
-                    cmd.Parameters.Add("@usuario", SqlDbType.Text).Value = usuario;
+                    cmd.Parameters.Add("@usuario2", SqlDbType.Text).Value = usuario;
                     con.Open();
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
 
@@ -43,7 +43,7 @@ namespace Sistema.Pages
                     da.Fill(dt);
                     if (dt.Rows.Count > 0)
                     {
-                        perfil = dt.Rows[0]["codperfil"].ToString();
+                        perfil = dt.Rows[0]["idrol"].ToString();
 
                     }
 
@@ -72,12 +72,8 @@ namespace Sistema.Pages
             else
             {
                 logo.Visible = false;
-                divadministrador.Visible = false;
-                divCampanas.Visible = false;
-                divoperaciones.Visible = false;
-                divoAgente.Visible = false;
-                divuser.Visible = false;
-
+                configuraacion.Visible = false;
+               
                 lblusuario.Text = string.Empty;
             }
 
@@ -108,10 +104,10 @@ namespace Sistema.Pages
 
             try
             {
-                SqlCommand cmd = new SqlCommand("opersis_login", con);
+                SqlCommand cmd = new SqlCommand("reporteador", con);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.Add("@operacion", "login");
-                cmd.Parameters.Add("@usuario", SqlDbType.Text).Value = usu;
+                cmd.Parameters.Add("@usuario2", SqlDbType.Text).Value = usu;
                 cmd.Parameters.Add("@clave", SqlDbType.Text).Value = clave;
                 con.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -121,7 +117,7 @@ namespace Sistema.Pages
                 if (dt.Rows.Count > 0)
                 {
                   
-                   nombre = dt.Rows[0]["nombres"].ToString();
+                   nombre = dt.Rows[0]["nombre"].ToString();
 
                 }
                 if (nombre == "")

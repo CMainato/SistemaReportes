@@ -49,49 +49,31 @@ namespace Sistema.Pages {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl logo;
         
         /// <summary>
-        /// Control divadministrador.
+        /// Control Usuarios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divadministrador;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Usuarios;
         
         /// <summary>
-        /// Control divreporteador.
+        /// Control configuraacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divreporteador;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl configuraacion;
         
         /// <summary>
-        /// Control divCampanas.
+        /// Control Asignaciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCampanas;
-        
-        /// <summary>
-        /// Control divoperaciones.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divoperaciones;
-        
-        /// <summary>
-        /// Control divoAgente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divoAgente;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Asignaciones;
         
         /// <summary>
         /// Control divuser.

@@ -34,7 +34,7 @@ namespace Sistema.Pages
                 if (dt.Rows.Count > 0)
                 {
                     estado.DataSource = cmd.ExecuteReader();
-                    estado.DataValueField = "id";
+                    estado.DataValueField = "idestado";
                     estado.DataTextField = "descripcion";
                     estado.DataBind();
 
@@ -131,7 +131,8 @@ namespace Sistema.Pages
 
             cdescripcion.Text="";
             ccadena.Text = "";
-            
+            consultarconx();
+
         }
 
 
