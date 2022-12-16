@@ -68,40 +68,49 @@
                                 </a>--%>
                             </div>
                         </div>
-                 <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="Usuarios">
-                            <a class="navbar-link">Usuarios
-                            </a>
 
-                            <div class="navbar-dropdown">
-                                 <a class="navbar-item"  href="#">Creación Usuario</a>
-                                
-                                                                        
-                            </div>
-                        </div>
-
-                           <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="configuraacion">
+                  <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="configuraacion">
                             <a class="navbar-link">Configuración
                             </a>
 
                             <div class="navbar-dropdown">
                                  <a class="navbar-item"  href="roles.aspx">Roles</a>
                                  <a class="navbar-item"  href="menus.aspx">Menus</a>
+                                 <a class="navbar-item"  href="menu_rol.aspx">Permisos Roles</a>
                                 <a class="navbar-item"  href="conexiones.aspx">Conexiones</a>
-                                 <a class="navbar-item"  href="campana.aspx">Campañas</a>
-                                  <a class="navbar-item"  href="repositorio.aspx">Repositorios</a>
-                                  <a class="navbar-item"  href="formatos.aspx">Formatos Salida</a>
-                                    <a class="navbar-item"  href="#">Parametros Query</a>
-                                  <a class="navbar-item"  href="frecuencias.aspx">Frecuencias</a>
+                                <a class="navbar-item"  href="formatos.aspx">Formatos Salida</a>
+                                <a class="navbar-item"  href="frecuencias.aspx">Frecuencias</a>
+                                 <a class="navbar-item"  href="repositorio.aspx">Repositorios</a>
+  
                                                                         
                             </div>
                         </div>
-                   <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="Asignaciones">
-                            <a class="navbar-link">Asignaciones
+               
+
+
+                 <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="Usuarios">
+                            <a class="navbar-link">Administración Usuario
                             </a>
 
                             <div class="navbar-dropdown">
-                                 <a class="navbar-item"  href="#">Parametros Query</a>
-                                 <a class="navbar-item"  href="#">Menu Rol</a>
+                                 <a class="navbar-item"  href="crear_usuario.aspx">Usuario</a>
+                                  
+                                
+                                                                        
+                            </div>
+                        </div>
+
+                         
+
+                 <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="procedimientos">
+                            <a class="navbar-link">Administración Procedimientos
+                            </a>
+
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item"  href="campana.aspx">Campañas</a>
+                                            <a class="navbar-item"  href="parametros.aspx">Parametros Query</a>
+                                <a class="navbar-item"  href="crear_query.aspx">Query</a>
+                                  
                                 
                                                                         
                             </div>
@@ -178,14 +187,14 @@
             </nav>
            </header>
        
-                <div class="nav-left-sidebar sidebar-dark">
+            <%--    <div class="nav-left-sidebar sidebar-dark">
                  
            
 
                     
-        </div>
+        </div>--%>
 
-               <div class="dashboard-wrapper">
+       
            
 
                                       

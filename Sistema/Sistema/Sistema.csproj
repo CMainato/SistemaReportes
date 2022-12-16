@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\logo.png" />
+    <Content Include="Pages\crear_query.aspx" />
+    <Content Include="Pages\crear_usuario.aspx" />
+    <Content Include="Pages\menu_rol.aspx" />
+    <Content Include="Pages\parametros.aspx" />
     <Content Include="Pages\campana.aspx" />
     <Content Include="Pages\frecuencias.aspx" />
     <Content Include="Pages\formatos.aspx" />
@@ -90,6 +94,34 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\crear_query.aspx.cs">
+      <DependentUpon>crear_query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\crear_query.aspx.designer.cs">
+      <DependentUpon>crear_query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\crear_usuario.aspx.cs">
+      <DependentUpon>crear_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\crear_usuario.aspx.designer.cs">
+      <DependentUpon>crear_usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\menu_rol.aspx.cs">
+      <DependentUpon>menu_rol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\menu_rol.aspx.designer.cs">
+      <DependentUpon>menu_rol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\parametros.aspx.cs">
+      <DependentUpon>parametros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\parametros.aspx.designer.cs">
+      <DependentUpon>parametros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\campana.aspx.cs">
       <DependentUpon>campana.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
