@@ -85,6 +85,7 @@
     <Content Include="Pages\linkcampana.aspx" />
     <Content Include="Pages\usuarios.aspx" />
     <Content Include="Pages\perfiles.aspx" />
+    <Content Include="ScriptBDD\SchemaInicial.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
