@@ -1,8 +1,499 @@
-/*==============================================================*/
-/* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     15/12/2022 17:42:42                          */
-/*==============================================================*/
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('APROBACIONES') and o.name = 'FK_APROBACI_APROBACIO_QUERY')
+alter table APROBACIONES
+   drop constraint FK_APROBACI_APROBACIO_QUERY
+go
 
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('APROBACIONES') and o.name = 'FK_APROBACI_PERSONA_A_PERSONA')
+alter table APROBACIONES
+   drop constraint FK_APROBACI_PERSONA_A_PERSONA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CONEXIONES_QUERY') and o.name = 'FK_CONEXION_CONEXIONE_QUERY')
+alter table CONEXIONES_QUERY
+   drop constraint FK_CONEXION_CONEXIONE_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CONEXIONES_QUERY') and o.name = 'FK_CONEXION_CONEXIONE_CONEXION')
+alter table CONEXIONES_QUERY
+   drop constraint FK_CONEXION_CONEXIONE_CONEXION
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FORMATO_QUERY') and o.name = 'FK_FORMATO__FORMATO_Q_FORMATOS')
+alter table FORMATO_QUERY
+   drop constraint FK_FORMATO__FORMATO_Q_FORMATOS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FORMATO_QUERY') and o.name = 'FK_FORMATO__FORMATO_Q_QUERY')
+alter table FORMATO_QUERY
+   drop constraint FK_FORMATO__FORMATO_Q_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FRECUECNIAS_DIA') and o.name = 'FK_FRECUECN_FRECUECNI_FRECUENC')
+alter table FRECUECNIAS_DIA
+   drop constraint FK_FRECUECN_FRECUECNI_FRECUENC
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FRECUECNIAS_DIA') and o.name = 'FK_FRECUECN_FRECUECNI_DIAFRECU')
+alter table FRECUECNIAS_DIA
+   drop constraint FK_FRECUECN_FRECUECNI_DIAFRECU
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('LOG') and o.name = 'FK_LOG_LOG_QUERY_QUERY')
+alter table LOG
+   drop constraint FK_LOG_LOG_QUERY_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('MENUS_ROL') and o.name = 'FK_MENUS_RO_MENUS_ROL_ROL')
+alter table MENUS_ROL
+   drop constraint FK_MENUS_RO_MENUS_ROL_ROL
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('MENUS_ROL') and o.name = 'FK_MENUS_RO_MENUS_ROL_MENU')
+alter table MENUS_ROL
+   drop constraint FK_MENUS_RO_MENUS_ROL_MENU
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('PERSONA') and o.name = 'FK_PERSONA_ROL_PERSO_ROL')
+alter table PERSONA
+   drop constraint FK_PERSONA_ROL_PERSO_ROL
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY') and o.name = 'FK_QUERY_CAMPANA_Q_CAMPANA')
+alter table QUERY
+   drop constraint FK_QUERY_CAMPANA_Q_CAMPANA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY') and o.name = 'FK_QUERY_LOG_QUERY_LOG')
+alter table QUERY
+   drop constraint FK_QUERY_LOG_QUERY_LOG
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY') and o.name = 'FK_QUERY_QUERY_FRE_FRECUENC')
+alter table QUERY
+   drop constraint FK_QUERY_QUERY_FRE_FRECUENC
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_CORREOS') and o.name = 'FK_QUERY_CO_QUERY_COR_QUERY')
+alter table QUERY_CORREOS
+   drop constraint FK_QUERY_CO_QUERY_COR_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_CORREOS') and o.name = 'FK_QUERY_CO_QUERY_COR_CORREOSD')
+alter table QUERY_CORREOS
+   drop constraint FK_QUERY_CO_QUERY_COR_CORREOSD
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_PARAMETROS') and o.name = 'FK_QUERY_PA_QUERY_PAR_QUERY')
+alter table QUERY_PARAMETROS
+   drop constraint FK_QUERY_PA_QUERY_PAR_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_PARAMETROS') and o.name = 'FK_QUERY_PA_QUERY_PAR_PARAMETR')
+alter table QUERY_PARAMETROS
+   drop constraint FK_QUERY_PA_QUERY_PAR_PARAMETR
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_REPOSITORIOS') and o.name = 'FK_QUERY_RE_QUERY_REP_QUERY')
+alter table QUERY_REPOSITORIOS
+   drop constraint FK_QUERY_RE_QUERY_REP_QUERY
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('QUERY_REPOSITORIOS') and o.name = 'FK_QUERY_RE_QUERY_REP_REPOSITO')
+alter table QUERY_REPOSITORIOS
+   drop constraint FK_QUERY_RE_QUERY_REP_REPOSITO
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('APROBACIONES')
+            and   name  = 'APROBACIONES_QUERY_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index APROBACIONES.APROBACIONES_QUERY_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('APROBACIONES')
+            and   name  = 'PERSONA_ABROBACION_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index APROBACIONES.PERSONA_ABROBACION_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('APROBACIONES')
+            and   type = 'U')
+   drop table APROBACIONES
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CAMPANA')
+            and   type = 'U')
+   drop table CAMPANA
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CONEXIONES')
+            and   type = 'U')
+   drop table CONEXIONES
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('CONEXIONES_QUERY')
+            and   name  = 'CONEXIONES_QUERY2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index CONEXIONES_QUERY.CONEXIONES_QUERY2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('CONEXIONES_QUERY')
+            and   name  = 'CONEXIONES_QUERY_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index CONEXIONES_QUERY.CONEXIONES_QUERY_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CONEXIONES_QUERY')
+            and   type = 'U')
+   drop table CONEXIONES_QUERY
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CONFIGURACIONES')
+            and   type = 'U')
+   drop table CONFIGURACIONES
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('CORREOSDESTINATORIOS')
+            and   type = 'U')
+   drop table CORREOSDESTINATORIOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('DIAFRECUENCIA')
+            and   type = 'U')
+   drop table DIAFRECUENCIA
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ESTADOS')
+            and   type = 'U')
+   drop table ESTADOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FORMATOS')
+            and   type = 'U')
+   drop table FORMATOS
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FORMATO_QUERY')
+            and   name  = 'FORMATO_QUERY2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FORMATO_QUERY.FORMATO_QUERY2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FORMATO_QUERY')
+            and   name  = 'FORMATO_QUERY_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FORMATO_QUERY.FORMATO_QUERY_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FORMATO_QUERY')
+            and   type = 'U')
+   drop table FORMATO_QUERY
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FRECUECNIAS_DIA')
+            and   name  = 'FRECUECNIAS_DIA2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FRECUECNIAS_DIA.FRECUECNIAS_DIA2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FRECUECNIAS_DIA')
+            and   name  = 'FRECUECNIAS_DIA_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FRECUECNIAS_DIA.FRECUECNIAS_DIA_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FRECUECNIAS_DIA')
+            and   type = 'U')
+   drop table FRECUECNIAS_DIA
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FRECUENCIA')
+            and   type = 'U')
+   drop table FRECUENCIA
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('LOG')
+            and   name  = 'LOG_QUERY2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index LOG.LOG_QUERY2_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('LOG')
+            and   type = 'U')
+   drop table LOG
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('MENU')
+            and   type = 'U')
+   drop table MENU
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('MENUS_ROL')
+            and   name  = 'MENUS_ROL2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index MENUS_ROL.MENUS_ROL2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('MENUS_ROL')
+            and   name  = 'MENUS_ROL_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index MENUS_ROL.MENUS_ROL_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('MENUS_ROL')
+            and   type = 'U')
+   drop table MENUS_ROL
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PARAMETROS')
+            and   type = 'U')
+   drop table PARAMETROS
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('PERSONA')
+            and   name  = 'ROL_PERSONA_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index PERSONA.ROL_PERSONA_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PERSONA')
+            and   type = 'U')
+   drop table PERSONA
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY')
+            and   name  = 'LOG_QUERY_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY.LOG_QUERY_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY')
+            and   name  = 'QUERY_FRECUENCIA_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY.QUERY_FRECUENCIA_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY')
+            and   name  = 'CAMPANA_QUERY_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY.CAMPANA_QUERY_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUERY')
+            and   type = 'U')
+   drop table QUERY
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_CORREOS')
+            and   name  = 'QUERY_CORREOS2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_CORREOS.QUERY_CORREOS2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_CORREOS')
+            and   name  = 'QUERY_CORREOS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_CORREOS.QUERY_CORREOS_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUERY_CORREOS')
+            and   type = 'U')
+   drop table QUERY_CORREOS
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_PARAMETROS')
+            and   name  = 'QUERY_PARAMETROS2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_PARAMETROS.QUERY_PARAMETROS2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_PARAMETROS')
+            and   name  = 'QUERY_PARAMETROS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_PARAMETROS.QUERY_PARAMETROS_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUERY_PARAMETROS')
+            and   type = 'U')
+   drop table QUERY_PARAMETROS
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_REPOSITORIOS')
+            and   name  = 'QUERY_REPOSITORIOS2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_REPOSITORIOS.QUERY_REPOSITORIOS2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('QUERY_REPOSITORIOS')
+            and   name  = 'QUERY_REPOSITORIOS_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index QUERY_REPOSITORIOS.QUERY_REPOSITORIOS_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('QUERY_REPOSITORIOS')
+            and   type = 'U')
+   drop table QUERY_REPOSITORIOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('REPOSITORIOS')
+            and   type = 'U')
+   drop table REPOSITORIOS
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('ROL')
+            and   type = 'U')
+   drop table ROL
+go
 
 /*==============================================================*/
 /* Table: APROBACIONES                                          */
@@ -43,7 +534,7 @@ create table CAMPANA (
    IDCAMPANA            numeric              identity,
    NOMBRE               varchar(250)         null,
    IDEXTERNO            int                  null,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
    FECHA_MODIFICACION   datetime             null,
@@ -57,7 +548,7 @@ go
 /*==============================================================*/
 create table CONEXIONES (
    IDCONEXIONES         numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    CADENA               varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
@@ -95,6 +586,17 @@ IDCONEXIONES ASC
 go
 
 /*==============================================================*/
+/* Table: CONFIGURACIONES                                       */
+/*==============================================================*/
+create table CONFIGURACIONES (
+   IDCONFIGURACION      numeric              identity,
+   DESCRIPCION          varchar(250)         not null,
+   VALOR                varchar(500)         not null,
+   constraint PK_CONFIGURACIONES primary key nonclustered (IDCONFIGURACION)
+)
+go
+
+/*==============================================================*/
 /* Table: CORREOSDESTINATORIOS                                  */
 /*==============================================================*/
 create table CORREOSDESTINATORIOS (
@@ -114,7 +616,7 @@ go
 /*==============================================================*/
 create table DIAFRECUENCIA (
    ID                   numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    INTERVALO            varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
@@ -130,7 +632,7 @@ go
 /*==============================================================*/
 create table ESTADOS (
    IDESTADO             numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    ESTADO               bit                  null,
    constraint PK_ESTADOS primary key nonclustered (IDESTADO)
 )
@@ -141,7 +643,7 @@ go
 /*==============================================================*/
 create table FORMATOS (
    IDFORMATO            numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    EXTENSION            varchar(50)          null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
@@ -158,7 +660,6 @@ go
 create table FORMATO_QUERY (
    IDFORMATO            numeric              not null,
    IDQUERY              numeric              not null,
-   ETIQUETA             varchar(250)         null,
    constraint PK_FORMATO_QUERY primary key (IDFORMATO, IDQUERY)
 )
 go
@@ -210,7 +711,7 @@ go
 /*==============================================================*/
 create table FRECUENCIA (
    IDFRECUENCIA         numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
    FECHA_MODIFICACION   datetime             null,
@@ -226,7 +727,7 @@ go
 create table LOG (
    IDLOG                char(10)             not null,
    IDQUERY              numeric              null,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    FECHA_EJECUCION      varchar(250)         null,
    RESULTADO            varchar(250)         null,
    MENSAJE              varchar(250)         null,
@@ -248,7 +749,7 @@ go
 /*==============================================================*/
 create table MENU (
    IDMENU               numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    MENU                 varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
@@ -454,7 +955,7 @@ go
 /*==============================================================*/
 create table REPOSITORIOS (
    IDRESPOSITORIO       numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    URL                  varchar(500)         null,
    USUARIO              varchar(250)         null,
    CLAVE                varchar(250)         null,
@@ -472,7 +973,7 @@ go
 /*==============================================================*/
 create table ROL (
    IDROL                numeric              identity,
-   DESCRIPCION          varchar(2000)        null,
+   DESCRIPCION          varchar(250)         null,
    FECHA_CREACION       datetime             null,
    USUARIO_CREACION     int                  null,
    FECHA_MODIFICACION   datetime             null,
@@ -481,18 +982,6 @@ create table ROL (
    constraint PK_ROL primary key nonclustered (IDROL)
 )
 go
-
-/*==============================================================*/
-/* Table: CONFIGURACIONES                                       */
-/*==============================================================*/
-create table CONFIGURACIONES (
-   IDCONFIGURACION      numeric              identity,
-   DESCRIPCION          varchar(250)         not null,
-   VALOR                varchar(500)         not null,
-   constraint PK_CONFIGURACIONES primary key nonclustered (IDCONFIGURACION)
-)
-go
-
 
 alter table APROBACIONES
    add constraint FK_APROBACI_APROBACIO_QUERY foreign key (IDQUERY)
@@ -598,4 +1087,3 @@ alter table QUERY_REPOSITORIOS
    add constraint FK_QUERY_RE_QUERY_REP_REPOSITO foreign key (IDRESPOSITORIO)
       references REPOSITORIOS (IDRESPOSITORIO)
 go
-
