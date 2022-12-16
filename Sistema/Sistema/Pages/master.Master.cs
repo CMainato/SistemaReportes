@@ -75,6 +75,7 @@ namespace Sistema.Pages
                 configuraacion.Visible = false;
                 Usuarios.Visible = false;
                 Asignaciones.Visible = false;
+                salir.Visible = false;
 
                 lblusuario.Text = string.Empty;
             }

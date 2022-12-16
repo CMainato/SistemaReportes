@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imagenes\logo.png" />
+    <Content Include="Pages\campana.aspx" />
+    <Content Include="Pages\frecuencias.aspx" />
+    <Content Include="Pages\formatos.aspx" />
+    <Content Include="Pages\repositorio.aspx" />
+    <Content Include="Pages\menus.aspx" />
+    <Content Include="Pages\roles.aspx" />
     <Content Include="Pages\conexiones.aspx" />
     <Content Include="Pages\inclusiones.aspx" />
     <Content Include="Pages\barridos.aspx" />
@@ -84,6 +90,48 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\campana.aspx.cs">
+      <DependentUpon>campana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\campana.aspx.designer.cs">
+      <DependentUpon>campana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\frecuencias.aspx.cs">
+      <DependentUpon>frecuencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\frecuencias.aspx.designer.cs">
+      <DependentUpon>frecuencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\formatos.aspx.cs">
+      <DependentUpon>formatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\formatos.aspx.designer.cs">
+      <DependentUpon>formatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\repositorio.aspx.cs">
+      <DependentUpon>repositorio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\repositorio.aspx.designer.cs">
+      <DependentUpon>repositorio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\menus.aspx.cs">
+      <DependentUpon>menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\menus.aspx.designer.cs">
+      <DependentUpon>menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\roles.aspx.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\roles.aspx.designer.cs">
+      <DependentUpon>roles.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\conexiones.aspx.cs">
       <DependentUpon>conexiones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

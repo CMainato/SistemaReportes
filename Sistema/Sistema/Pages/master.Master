@@ -84,14 +84,14 @@
                             </a>
 
                             <div class="navbar-dropdown">
-                                 <a class="navbar-item"  href="#">Roles</a>
-                                 <a class="navbar-item"  href="#">Menus</a>
+                                 <a class="navbar-item"  href="roles.aspx">Roles</a>
+                                 <a class="navbar-item"  href="menus.aspx">Menus</a>
                                 <a class="navbar-item"  href="conexiones.aspx">Conexiones</a>
-                                 <a class="navbar-item"  href="#">Campañas</a>
-                                  <a class="navbar-item"  href="#">Repositorios</a>
-                                  <a class="navbar-item"  href="#">Formatos</a>
+                                 <a class="navbar-item"  href="campana.aspx">Campañas</a>
+                                  <a class="navbar-item"  href="repositorio.aspx">Repositorios</a>
+                                  <a class="navbar-item"  href="formatos.aspx">Formatos Salida</a>
                                     <a class="navbar-item"  href="#">Parametros Query</a>
-                                  <a class="navbar-item"  href="#">Frecuencias</a>
+                                  <a class="navbar-item"  href="frecuencias.aspx">Frecuencias</a>
                                                                         
                             </div>
                         </div>
@@ -154,11 +154,11 @@
                         </div>--%>
 
 
-                    </div>
-
+                    
+                         
                     <div class="navbar-end has-text-centered navbar-brand">
 
-                        <div runat="server" id="divuser" class="navbar-item has-dropdown is-hoverable">
+                  <div runat="server"  class="navbar-item has-dropdown is-hoverable" id="salir">
                          
 
                             <asp:Label CssClass="navbar-link" runat="server" ID="lblusuario"></asp:Label>
